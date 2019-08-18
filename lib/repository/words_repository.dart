@@ -11,13 +11,18 @@ class WordsRepository {
 
   factory WordsRepository() => _singleton;
 
+  var _cachedWords = <String>[];
+
   //
   Future<List<String>> get(String query) async {
-    var wordsEnglish = await _words(AppFiles.words_english);
-    var wordsRussian = await _words(AppFiles.words_russian);
+    if (_cachedWords.isEmpty) {
+      var wordsEnglish = await _words(AppFiles.words_english);
+      var wordsRussian = await _words(AppFiles.words_russian);
+      _cachedWords = [...wordsEnglish, ...wordsRussian];
+    }
 
-    return [...wordsEnglish, ...wordsRussian]
-        .where((w) => w.toLowerCase().contains(query.toLowerCase()))
+    return _cachedWords
+        .where((w) => w.toLowerCase().startsWith(query.toLowerCase()))
         .toList();
   }
 
