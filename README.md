@@ -13,4 +13,4 @@
 - [Video 4](https://photos.app.goo.gl/d7wWSJ2DpcDCWPbn7)
 - [Video 5](https://photos.app.goo.gl/7Srmn7K5y7zpLm8eA)
 - [Video 6](https://photos.app.goo.gl/7Srmn7K5y7zpLm8eA)
-- [Video 7](...)
+- [Video 7](https://photos.app.goo.gl/EmZSdjzjzFib478p7)
